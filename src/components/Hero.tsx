@@ -48,11 +48,13 @@ export function Hero() {
                   Start Your Podcast Journey
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+                </Button>
+                {/* 
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
-              </Button>
+                </Button>
+                */}
             </div>
           </div>
 

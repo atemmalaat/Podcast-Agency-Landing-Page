@@ -1,5 +1,4 @@
 .vercel
-RESEND_API_KEY=re_ARzRACoA_HSbWtnTuUbXEzKzwGqh7v1c5
-CONTACT_TO=atembior1@gmail.com
-CONTACT_FROM=http://localhost:3000
+
 node_modules
+.env

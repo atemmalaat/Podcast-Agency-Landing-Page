@@ -48,7 +48,7 @@ export function About() {
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               TheSearchersPodcasterNetwork was founded by a team of audio engineers, 
               content strategists, and digital marketers who recognized the need for 
-              comprehensive podcast production services. We believe every voice deserves 
+              comprehensive podcast production services in the greater Brisbane and Ipswich area. We believe every voice deserves 
               to be heard with crystal-clear quality and maximum reach.
             </p>
 

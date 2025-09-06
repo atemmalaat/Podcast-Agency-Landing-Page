@@ -12,18 +12,39 @@ export function Contact() {
     phone: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you! We\'ll get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Thank you! We'll get back to you within 24 hours.");
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -91,8 +112,8 @@ export function Contact() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600">
-                  Get Free Consultation
+                <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600" disabled={submitting}>
+                  {submitting ? "Submitting..." : "Get Free Consultation"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
@@ -116,7 +137,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Email Us</div>
-                  <div className="text-gray-600">hello@thesearcherspodcasternetwork.com</div>
+                  <div className="text-gray-600">atembior@thesearcherspodcasternetwork.com</div>
                 </div>
               </div>
 
@@ -153,7 +174,7 @@ export function Contact() {
 
             <div className="w-full">
                 <iframe
-                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=21+Waterfern+Way,Ripley+QLD+4306"
+                    src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=21+Waterfern+Way,Ripley+QLD+4306`}
                     width="100%"
                     height="450"
                     style={{ border: 0 }}

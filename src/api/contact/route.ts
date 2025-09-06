@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
     const html = `
       <div style="font-family:Arial,sans-serif;line-height:1.6">
-        <h2>New Consultation Request — The Searchers Podcast Network</h2>
+        <h2>New Consultation Request — TheSearchersPodcasterNetwork</h2>
         <p><b>Name:</b> ${escapeHtml(name)}</p>
         <p><b>Email:</b> ${escapeHtml(email)}</p>
         <p><b>Phone:</b> ${escapeHtml(phone || "—")}</p>
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       from: FROM,
       to: TO,
       subject: "New Consultation Request — TheSearchersPodcasterNetwork",
-      reply_to: email,
+      replyTo: email,
       html,
     });
 

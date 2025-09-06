@@ -24,6 +24,9 @@ export function Header() {
             <a href="#services" className="text-gray-700 hover:text-orange-600 transition-colors">
               Services
             </a>
+            <a href="#how-to-start" className="text-gray-700 hover:text-orange-600 transition-colors">
+              How to Start
+            </a>
             <a href="#about" className="text-gray-700 hover:text-orange-600 transition-colors">
               About
             </a>
@@ -59,6 +62,9 @@ export function Header() {
             <nav className="flex flex-col space-y-4">
               <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-orange-600 transition-colors">
                 Services
+              </a>
+              <a href="#how-to-start" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-orange-600 transition-colors">
+                How to Start
               </a>
               <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-orange-600 transition-colors">
                 About

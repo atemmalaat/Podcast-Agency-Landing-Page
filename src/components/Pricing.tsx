@@ -7,6 +7,7 @@ const packages = [
     {
       name: "Basic Package",
       price: "$199",
+      priceId: "price_1S4MMmHK1CRTD6x4lRvh4KsI",
       description: "Perfect for those interested in seeing how a podcast can benefit their business or personal brand.",
       features: [
         "1 Fully Produced Episode",
@@ -19,6 +20,7 @@ const packages = [
     }, {
       name: "Podder Starter Package",
       price: "$399/month",
+      priceId: "price_1S4MmaHK1CRTD6x4QMh7DFi6",
       description: "Perfect for new podcasters",
       features: [
         "4 episodes per month",
@@ -32,6 +34,7 @@ const packages = [
     {
       name: "Professional Package",
       price: "$999/month",
+      priceId: "price_1S4MmyHK1CRTD6x4kFkZqyDP",
       description: "Most popular choice",
       features: [
         "8 episodes per month",
@@ -47,6 +50,7 @@ const packages = [
     {
       name: "Enterprise Package",
       price: "Custom",
+      priceId: "", // No price ID for custom package
       description: "For serious podcasters",
       features: [
         "Unlimited episodes",
@@ -114,7 +118,7 @@ export function Pricing() {
                   variant={pkg.popular ? 'default' : 'outline'}
                   asChild
                 >
-                  <a href={pkg.price === 'Custom' ? '#contact' : '#'}>
+                  <a href={pkg.price === 'Custom' ? '#contact' : `/checkout?priceId=${pkg.priceId}`}>
                     {pkg.price === 'Custom' ? 'Contact Us' : 'Get Started'}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
