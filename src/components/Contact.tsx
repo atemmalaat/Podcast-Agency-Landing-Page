@@ -126,7 +126,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Call Us</div>
-                  <div className="text-gray-600">(555) 123-PODCAST</div>
+                  <div className="text-gray-600">0401369628</div>
                 </div>
               </div>
 
@@ -136,7 +136,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Visit Our Studio</div>
-                  <div className="text-gray-600">123 Audio Lane, Media City, MC 12345</div>
+                  <div className="text-gray-600">21 Waterfern Way, Ripley QLD 4306</div>
                 </div>
               </div>
 
@@ -146,20 +146,22 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Business Hours</div>
-                  <div className="text-gray-600">Mon-Fri: 9AM-8PM EST</div>
+                  <div className="text-gray-600">Mon-Fri: 9AM-2PM EST</div>
                 </div>
               </div>
             </div>
 
-            <Card className="bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
-              <CardContent className="p-6">
-                <h4 className="text-xl font-bold mb-2">24-Hour Response Guarantee</h4>
-                <p className="text-purple-100">
-                  We promise to respond to all inquiries within 24 hours. Need faster?
-                  Call us directly for immediate assistance.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="w-full">
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=21+Waterfern+Way,Ripley+QLD+4306"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
           </div>
         </div>
       </div>
