@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = process.env.DOMAIN || 'http://localhost:3001';
+const YOUR_DOMAIN = process.env.DOMAIN || 'https://thesearcherspodcastnetwork.au';
 
 app.post('/create-checkout-session', async (req, res) => {
   const { priceId } = req.body;

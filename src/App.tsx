@@ -21,7 +21,7 @@ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY_LIVE || 
 const CheckoutForm = () => {
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session
-    return fetch("http://localhost:4242/create-checkout-session", {
+    return fetch("https://podcast-agency-landing-page-fxf6-git-main-atem-biors-projects.vercel.app/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const Return = () => {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get('session_id');
 
-    fetch(`http://localhost:4242/session-status?session_id=${sessionId}`)
+    fetch(`https://podcast-agency-landing-page-fxf6-git-main-atem-biors-projects.vercel.app/session-status?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.status);
