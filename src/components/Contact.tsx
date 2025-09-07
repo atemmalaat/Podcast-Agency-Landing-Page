@@ -153,16 +153,6 @@ export function Contact() {
 
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mr-4">
-                  <MapPin className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Visit Our Studio</div>
-                  <div className="text-gray-600">21 Waterfern Way, Ripley QLD 4306</div>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mr-4">
                   <Clock className="h-6 w-6 text-white" />
                 </div>
                 <div>
