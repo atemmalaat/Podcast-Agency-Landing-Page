@@ -5,7 +5,7 @@
 This project is a full-stack web application for "The Searchers Podcast Network," a professional podcast studio and production service based in Brisbane, Australia. The website is designed to serve as a showcase of software development competency, demonstrating proficiency across a modern technology stack for a real-world business application.
 
 Here's a glimpse of the professional landing page:
-![The Searchers Podcast Network Landing Page](https://raw.githubusercontent.com/atemmalaat/Podcast-Agency-Landing-Page/main/src/assets/landing-page2.png)
+![The Searchers Podcast Network Landing Page]([https://raw.githubusercontent.com/atemmalaat/Podcast-Agency-Landing-Page/main/src/assets/landing-page2.png](https://raw.githubusercontent.com/atemmalaat/Podcast-Agency-Landing-Page/5066c02927d0b3c96ee005002ab59bdcfa8b3f9f/src/assets/landing-page2.png?token=GHSAT0AAAAAADJPAT3FY6LTKAGWN2HSSES62F6GZ3A))
 
 ## Project Goals
 
